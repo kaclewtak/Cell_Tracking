@@ -1,0 +1,67 @@
+[project]
+name = "cell-tracking"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "kaggle>=2.2.4",
+    "matplotlib>=3.11.1",
+    "numpy>=2.5.1",
+    "polars>=1.43.2",
+    "scikit-learn>=1.9.0",
+    "scipy>=1.18.0",
+    "torch>=2.13.0",
+    "zarr>=3.3.0",
+]
+
+[project.scripts]
+cell-tracking = "cell_tracking:main"
+
+[build-system]
+requires = ["uv_build>=0.12.3,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.3.0",
+    "ipython>=9.16.1",
+    "pre-commit>=4.6.1",
+    "pyrefly>=1.2.0",
+    "pytest>=9.1.1",
+    "ruff>=0.16.2",
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py314"
+src = ["src"]
+
+[tool.ruff.lint]
+select = [
+    "E",    # pycodestyle errors
+    "W",    # pycodestyle warnings
+    "F",    # pyflakes
+    "I",    # isort
+    "N",    # pep8-naming
+    "UP",   # pyupgrade
+    "B",    # flake8-bugbear
+    "C4",   # flake8-comprehensions
+    "SIM",  # flake8-simplify
+    "RUF",  # ruff-specific rules
+]
+ignore = []
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]  # allow unused imports in package re-exports
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.pyrefly]
+project-includes = ["."]
+python-version = "3.14"
+preset = "strict"
+check-unannotated-defs = true
+pytorch-efficiency-lints = true

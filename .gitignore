@@ -1,0 +1,64 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Tooling caches
+.ruff_cache/
+.mypy_cache/
+.pytest_cache/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Kaggle
+kaggle.json
+.kaggle/
+/kaggle/input/
+/kaggle/working/
+
+# Data
+/data/
+/datasets/
+/input/
+
+# Model weights & checkpoints
+/models/
+/checkpoints/
+/weights/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.safetensors
+*.h5
+*.tflite
+
+# Experiment tracking & training outputs
+/wandb/
+/mlruns/
+/lightning_logs/
+/runs/
+/outputs/
+/logs/
+events.out.tfevents.*
+
+# Notebooks
+.ipynb_checkpoints/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Custom Documentation
+/docs/
