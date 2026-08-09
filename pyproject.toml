@@ -62,6 +62,7 @@ indent-style = "space"
 [tool.pyrefly]
 project-includes = ["."]
 python-version = "3.14"
+python-interpreter-path = ".venv/bin/python" # resolve imports from the project venv (incl. under pre-commit)
 preset = "strict"
 check-unannotated-defs = true
 pytorch-efficiency-lints = true

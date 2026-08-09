@@ -30,6 +30,9 @@ kaggle.json
 /datasets/
 /input/
 
+# Vendored external repos
+/third_party/
+
 # Model weights & checkpoints
 /models/
 /checkpoints/
