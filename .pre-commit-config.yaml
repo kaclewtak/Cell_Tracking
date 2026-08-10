@@ -2,9 +2,11 @@ repos:
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.16.2
     hooks:
-      - id: ruff # lint (handles .py and .ipynb)
+      - id: ruff # lint incl. isort import sorting (handles .py and .ipynb)
+        args: [--fix] # auto-fix what it can (e.g. sort imports) instead of only failing
       - id: ruff-format # format (handles .py and .ipynb)
   - repo: https://github.com/facebook/pyrefly-pre-commit
     rev: 1.2.0
     hooks:
       - id: pyrefly-check # whole-project type check using [tool.pyrefly] config
+        types_or: [python, pyi, jupyter]
